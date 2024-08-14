@@ -1,0 +1,82 @@
+/* Base styling for the navbar */
+nav {
+  background-color: #0b0c10; /* Dark background */
+  padding: 10px; /* Padding around navbar */
+  font-family: 'orpheus'; /* Apply a more appealing font */
+}
+
+/* Flex container for navbar items */
+.navbar-container {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logo container styling */
+.logo-container {
+  height: 40px; /* Height of the logo container */
+  width: 120px; /* Width of the logo container, adjust as needed */
+  background-image: url('./Images/logo.jpg'); /* Path to your logo image */
+  background-size: contain; /* Ensure the image fits within the container */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: center; /* Center the image within the container */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for logo */
+.logo-container:hover {
+  transform: scale(1.1); /* Slightly scale up the logo on hover */
+}
+
+/* Navigation links container */
+.nav-links {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Flexbox for layout */
+}
+
+/* Individual navigation link items */
+.nav-links li {
+  margin: 0 10px; /* Horizontal margin between links */
+}
+
+/* Navigation link styling */
+.nav-links li a {
+  color: #66fcf1; /* Light blue text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+  padding: 10px 15px; /* Padding inside links */
+  display: block; /* Block display for padding to work */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for navigation links */
+.nav-links li a:hover {
+  background-color: #66fcf1; /* Light blue background on hover */
+  color: #0b0c10; /* Dark text color on hover */
+  transform: scale(1.05); /* Slightly scale up the link on hover */
+}
+
+/* Active link styling */
+.nav-links li a.active {
+  background-color: #66fcf1; /* Light blue background for active link */
+  color: #0b0c10; /* Dark text color for active link */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow effect for active link */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+  }
+
+  .nav-links li {
+    margin: 5px 0; /* Adjust margin for vertical stacking */
+  }
+}

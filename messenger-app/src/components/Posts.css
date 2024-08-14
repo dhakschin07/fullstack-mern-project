@@ -1,0 +1,28 @@
+@keyframes shadeAnimation {
+    0% {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  @keyframes tiltAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .card {
+    animation: shadeAnimation 5s infinite alternate, tiltAnimation 3s infinite alternate;
+  }
+  
